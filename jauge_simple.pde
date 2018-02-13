@@ -1,5 +1,5 @@
 /************  tout ce qu il faut pour afficher une Jauge ***************
- ***** francois Sahuc ********** Juin 2017 ******************************
+ ***** par moi ! ********** Juin 2017 ******************************
 affichage de temperature pour exemple
 l affichage est dans un carre de 200 x 200
 la variable s appelle temp
@@ -17,8 +17,8 @@ void draw()
 //************* pour faire changer la variable avec la souris ***********
 // a modifier ou effacer en cas d un autre usage
  temp= temp+ ((-mouseY+100)/50) ;
- if (temp>150) {temp=150;}  // airspeed max 300
- if (temp<0) {temp=0;}  // airspeed min 0
+ if (temp>150) {temp=150;}  // la temp max est 150
+ if (temp<0) {temp=0;}  //     la temp min 0
 
  // ************* dessin des arcs *****************************
 background (0);   //  fond noir
@@ -26,7 +26,7 @@ stroke (255);    // trait blanc
 fill (90,90,90);  // background gris , c est des valeurs en R,G,B
 pushMatrix();      // matrice ;l origine est en haut a gauche
                   // mais tout ce qui est entre push matrix et popmatrix sera decale dans le nouveau repere
-translate (100,100);   // on bouge l origine de la matrice au centre, en 100,100, au centre
+translate (100,100);   // on bouge l origine de la matrice au centre, en 100,100
 strokeWeight(4);     //  epaisseur trait 4
 stroke (0,255,0);    //  couleur verte
 arc(0,0,180,180,HALF_PI,PI+QUARTER_PI);  // arc vert, c est en radians
@@ -46,7 +46,7 @@ fill(#0096c9); //  texte en bleu
  text ("TEMP",10,40); 
  text (int(temp), 30, 70); 
 
-/**   notes ;
+/**   notes ; rappel pour faire un arc :
 arc(a, b, c, d, start, stop)
 a   float: x-coordinate of the arc's ellipse
 b   float: y-coordinate of the arc's ellipse
@@ -74,6 +74,7 @@ endShape();  //  fin de l aiguille
 popMatrix();  // reset de la matrice rotation
  /**  
  // XXXXXXXXXXXXXXXXXXXXXXXXXXXX TEST XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX
+  (decommenter pour tester)  
   stroke(255, 0,255);    //  index mauve pour  positionner les elements, a effacer
   strokeWeight(2);
   line (-100,-100,500,500);
